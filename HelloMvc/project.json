@@ -8,18 +8,18 @@
         "emitEntryPoint": true
     },
     "dependencies" : {
-        "FluentValidation": "6.3.0-alpha",
+        "FluentValidation": "6.3.0.0-alpha",
         "Microsoft.NETCore.App": {
             "type": "platform",
-            "version": "1.0.0-rc2-23931"
+            "version": "1.0.0-rc2-24027"
         },
-        "Microsoft.Extensions.Logging.Console": "1.0.0-*",
-        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-*",
-        "Microsoft.AspNetCore.Mvc": "1.0.0-*",
-        "Microsoft.AspNetCore.StaticFiles": "1.0.0-*",
-        "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
-        "System.Runtime.Serialization.Primitives": "4.1.1-*"
+        "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-*",
+        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-*",
+        "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-*",
+        "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-*",
+        "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-*",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-*",
+        "System.Runtime.Serialization.Primitives": "4.1.1-rc2-*"
     },
     "frameworks": {
       "netcoreapp1.0": {
@@ -30,7 +30,10 @@
     },
 
     "tools": {
-      "dotnet-publish-iis": "1.0.0-*"
+      "dotnet-publish-iis": {
+        "version": "1.0.0-*",
+        "imports":["portable-net40+sl5+win8+wp8+wpa81"]
+      }
     },
     "scripts": {
       "postpublish": "dotnet publish-iis --publish-folder %publish:OutputPath%"
